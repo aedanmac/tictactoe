@@ -18,7 +18,7 @@
 			</header>
 		
 		<table class="gameboard">
-  			<tr class>
+  			<tr class="cells">
     			<td ng-click="getMove(0)">{{getSymbol(0)}}</td>
     			<td ng-click="getMove(1)">{{getSymbol(1)}}</td> 
     			<td ng-click="getMove(2)">{{getSymbol(2)}}</td>
@@ -34,6 +34,12 @@
 			  <td ng-click="getMove(8)">{{getSymbol(8)}}</td>
 			</tr>
 		</table>
-		
+		<table class="scoreboard">
+		</table>
+			<tr>
+				<td id="winners">Player One</td>
+				<td id="winners">Player Two</td>
+			</tr>
+		</table>
 	</body>
 </html>

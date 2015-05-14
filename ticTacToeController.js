@@ -31,23 +31,37 @@ angular
 
 
 
-	function getWinner() {
+/*	function getWinner() {
 		var squares = $scope.game.board;
 		var sum;
 		for(var row = 0; row < 3; row++){
 			sum = squares[row * 3] + squares[row * 3 + 1] + squares[row * 3 +2];
-			if (sum === 3){
-				return 1;	
-			} else if (sum === -3) {
-				return -1;
-			} else {
-				return 0;
-			}
+			winner = checkWinner(sum);
+        	if ( winner ) { return winner; }
 
-		}	
+		} for(var col = 0; col < 3; col++) {
+			sum = squares[col * 3] + squares[col * 3 + 3] + squares[col * 3 + 6];
+			winner = checkWinner(sum);
+        	if ( winner ) { return winner; }
+
+		} sum = squares[dia * 3] + squares[dia * 3 + 4] + squares[dia * 3 + 8];
+			winner = checkWinner(sum);
+        	if ( winner ) { return winner; }
+
+		  sum = squares[dia * 3] + squares[dia * 3 + 2] + squares[dia * 3 +4];
+		 	winner = checkWinner(sum);
+        	if ( winner ) { return winner; }
+	
+	function checkWinner(sum) {
+	if(sum === 3){
+		return 1
+	} else if(sum === -3){
+		return -1
+	}
+	}
 
 
-  	}		
 
+			*/
 
 }
