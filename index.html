@@ -1,5 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="ticTacToe">
 <head>
-  <meta charset="UTF-8">
-  <title>Tic Tac Toe</title>
+  	<meta charset="UTF-8">
+  	<title>Tic Tac Toe</title>
+  	<link rel="stylesheet" type="text/css" href="styles.css"></link>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+ 	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
+  	<script type="text/javascript" src="app.js"></script>
+  	<script type="text/javascript" src="ticTacToeController.js"></script>
+</head>
+	<body ng-controller="ticTacToeController">
+
+		<header>
+				<h1>Let's Play Tic Tac Toe</h1>
+			</header>
+		
+		<table class="gameboard">
+  			<tr class>
+    			<td ng-click="getMove(0)">{{getSymbol(0)}}</td>
+    			<td ng-click="getMove(1)">{{getSymbol(1)}}</td> 
+    			<td ng-click="getMove(2)">{{getSymbol(2)}}</td>
+			</tr>
+			<tr class="cells">
+			  <td ng-click="getMove(3)">{{getSymbol(3)}}</td>
+			  <td ng-click="getMove(4)">{{getSymbol(4)}}</td> 
+			  <td ng-click="getMove(5)">{{getSymbol(5)}}</td>
+			</tr>
+			<tr class="cells">
+			  <td ng-click="getMove(6)">{{getSymbol(6)}}</td>
+			  <td ng-click="getMove(7)">{{getSymbol(7)}}</td> 
+			  <td ng-click="getMove(8)">{{getSymbol(8)}}</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>

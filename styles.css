@@ -1,0 +1,21 @@
+h1 {
+	text-align: center;
+}
+
+.gameboard {
+	width: 300px;
+	height: 300px;
+	border: 2px solid black;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+.gameboard td {
+	width: 100px;
+	height: 100px;
+	border: 2px solid black;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
