@@ -25,43 +25,54 @@ angular
 		if (sqVal) return;
 		$scope.game.board[square] = $scope.game.turn;
 		$scope.game.turn *= -1;
-		$scope.game.winner = getWinner();
+		$scope.game.player1wins = getWinner();
+		$scope.game.player2wins = getWinner();
 	}
 
 
 
 
-/*	function getWinner() {
+	function getWinner() {
 		var squares = $scope.game.board;
 		var sum;
 		for(var row = 0; row < 3; row++){
 			sum = squares[row * 3] + squares[row * 3 + 1] + squares[row * 3 +2];
-			winner = checkWinner(sum);
+			var winner = checkWinner(sum);
         	if ( winner ) { return winner; }
 
 		} for(var col = 0; col < 3; col++) {
-			sum = squares[col * 3] + squares[col * 3 + 3] + squares[col * 3 + 6];
-			winner = checkWinner(sum);
+			sum = squares[col + 0] + squares[col + 3] + squares[col +6];
+			var winner = checkWinner(sum);
         	if ( winner ) { return winner; }
 
-		} sum = squares[dia * 3] + squares[dia * 3 + 4] + squares[dia * 3 + 8];
-			winner = checkWinner(sum);
-        	if ( winner ) { return winner; }
+		} sum = squares[0] + squares[4] + squares[8];
+			var winner = checkWinner(sum);
+        	if ( winner ) { return winner; };
 
-		  sum = squares[dia * 3] + squares[dia * 3 + 2] + squares[dia * 3 +4];
-		 	winner = checkWinner(sum);
-        	if ( winner ) { return winner; }
+		  sum = squares[6] + squares[4] + squares[2];
+		 	var winner = checkWinner(sum);
+        	if ( winner ) { return winner; };
+        return 0;
+	}
+
 	
 	function checkWinner(sum) {
 	if(sum === 3){
-		return 1
+		console.log ("winner = 1");
+		$scope.player1wins = "Winner";
 	} else if(sum === -3){
-		return -1
+		console.log ("winner = 2");	
 	}
-	}
 
 
+	} 
+$scope.reset = function () {
+	$scope.game.board = [0,0,0,0,0,0,0,0,0];
+	$scope.game.winner = 0;
+	$scope.game.turn = 1;
+}
 
-			*/
+
+			
 
 }

@@ -18,28 +18,38 @@
 			</header>
 		
 		<table class="gameboard">
-  			<tr class="cells">
+  			<tr>
     			<td ng-click="getMove(0)">{{getSymbol(0)}}</td>
     			<td ng-click="getMove(1)">{{getSymbol(1)}}</td> 
     			<td ng-click="getMove(2)">{{getSymbol(2)}}</td>
 			</tr>
-			<tr class="cells">
+			<tr>
 			  <td ng-click="getMove(3)">{{getSymbol(3)}}</td>
 			  <td ng-click="getMove(4)">{{getSymbol(4)}}</td> 
 			  <td ng-click="getMove(5)">{{getSymbol(5)}}</td>
 			</tr>
-			<tr class="cells">
+			<tr>
 			  <td ng-click="getMove(6)">{{getSymbol(6)}}</td>
 			  <td ng-click="getMove(7)">{{getSymbol(7)}}</td> 
 			  <td ng-click="getMove(8)">{{getSymbol(8)}}</td>
 			</tr>
 		</table>
-		<table class="scoreboard">
-		</table>
+		<table class="scoreplay1">
 			<tr>
-				<td id="winners">Player One</td>
-				<td id="winners">Player Two</td>
+				<td>Player One</td>
+			</tr>
+			<tr>
+				<td><div>{{game.player1wins}}</div></td>
 			</tr>
 		</table>
+		<table class="scoreplay2">
+			<tr>
+				<td>Player Two</td>
+			</tr>
+			<tr>
+				<td><div ng-show="game.player2wins == -1">Winner</div></td>
+			</tr>
+		</table>
+		<input type="button" class="reset" value="New Game" ng-click="reset()"/>
 	</body>
 </html>
