@@ -24,14 +24,14 @@
     			<td ng-click="getMove(2)">{{getSymbol(2)}}</td>
 			</tr>
 			<tr>
-			  <td ng-click="getMove(3)">{{getSymbol(3)}}</td>
-			  <td ng-click="getMove(4)">{{getSymbol(4)}}</td> 
-			  <td ng-click="getMove(5)">{{getSymbol(5)}}</td>
+			  	<td ng-click="getMove(3)">{{getSymbol(3)}}</td>
+			  	<td ng-click="getMove(4)">{{getSymbol(4)}}</td> 
+			  	<td ng-click="getMove(5)">{{getSymbol(5)}}</td>
 			</tr>
 			<tr>
-			  <td ng-click="getMove(6)">{{getSymbol(6)}}</td>
-			  <td ng-click="getMove(7)">{{getSymbol(7)}}</td> 
-			  <td ng-click="getMove(8)">{{getSymbol(8)}}</td>
+			  	<td ng-click="getMove(6)">{{getSymbol(6)}}</td>
+			  	<td ng-click="getMove(7)">{{getSymbol(7)}}</td> 
+			  	<td ng-click="getMove(8)">{{getSymbol(8)}}</td>
 			</tr>
 		</table>
 		<table class="scoreplay1">
@@ -41,6 +41,9 @@
 			<tr>
 				<td><div>{{game.player1wins}}</div></td>
 			</tr>
+			<tr>
+				<td><div>{{game.score1}}</div></td>
+			</tr>
 		</table>
 		<table class="scoreplay2">
 			<tr>
@@ -49,7 +52,11 @@
 			<tr>
 				<td><div>{{game.player2wins}}</div></td>
 			</tr>
+			<tr>
+				<td><div>{{game.score2}}</div></td>
+			</tr>
 		</table>
-		<input type="button" class="reset" value="New Game" ng-click="reset()"/>
+		<input type="button" class="reset" value="New Game" ng-click="resetGame()"/>
+		<input type="button" class="reset" value="Reset Win Count" ng-click="resetWinCount()"/>
 	</body>
 </html>

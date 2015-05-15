@@ -48,6 +48,7 @@ body {
 	border: 2px solid black;
 }
 .reset {
-	margin-left: 446px;
+	display: table;
+    margin: 0 auto;
 	background-color: red;
 }
