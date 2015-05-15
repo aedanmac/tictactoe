@@ -25,8 +25,8 @@ angular
 		if (sqVal) return;
 		$scope.game.board[square] = $scope.game.turn;
 		$scope.game.turn *= -1;
-		$scope.game.player1wins = getWinner();
-		$scope.game.player2wins = getWinner();
+		getWinner();
+		
 	}
 
 
@@ -59,9 +59,10 @@ angular
 	function checkWinner(sum) {
 	if(sum === 3){
 		console.log ("winner = 1");
-		$scope.player1wins = "Winner";
+		$scope.game.player1wins = "Winner";
 	} else if(sum === -3){
 		console.log ("winner = 2");	
+		$scope.game.player2wins = "Winner";
 	}
 
 
@@ -70,6 +71,8 @@ $scope.reset = function () {
 	$scope.game.board = [0,0,0,0,0,0,0,0,0];
 	$scope.game.winner = 0;
 	$scope.game.turn = 1;
+	$scope.game.player1wins = " ";
+	$scope.game.player2wins = " ";
 }
 
 
