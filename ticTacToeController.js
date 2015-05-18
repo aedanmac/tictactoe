@@ -95,6 +95,11 @@ $scope.resetGame = function () {
 $scope.resetWinCount = function () {
 	$scope.game.score1 = 0;
 	$scope.game.score2 = 0;
+	$scope.game.board = [0,0,0,0,0,0,0,0,0];
+	$scope.game.turn = 1;
+	$scope.game.player1wins = " ";
+	$scope.game.player2wins = " ";
+	$scope.canMove = true;
 
 }
 
